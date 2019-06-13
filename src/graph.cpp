@@ -64,3 +64,13 @@ TimeUnit Graph::vertexPenaltyOnewayOnly (Vertex vertex) const {
 	}
 	return totalPenalty;
 }
+
+TimeUnit Graph::totalPenalty (void) const {
+	TimeUnit totalPenalty = 0;
+	size_t numberOfVertices = this->getNumberOfVertices(void);
+
+	for(int vertice = 0; vertice < numberOfVertices; vertice++ ){
+		totalPenalty += verticePenaltyOnewayOnly(vertice);
+	}
+	return totalPenalty;
+}

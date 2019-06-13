@@ -118,5 +118,12 @@ int main (void) {
 		assert_equal(penalty, expectedPenalty);
 	} end_test_case;
 
+	test_case ("total penalty") {
+		TimeUnit penalty;
+		TimeUnit expectedPenalty = 2+6+5;
+		penalty = graph->totalPenalty();
+		assert_equal(penalty, expectedPenalty);
+	} end_test_case;
+
 	delete graph;
 }
